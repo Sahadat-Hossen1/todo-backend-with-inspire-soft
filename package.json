@@ -1,0 +1,18 @@
+{
+  "name": "todo-backend",
+  "version": "1.0.0",
+  "description": "there will i build backend project with express js,mongoose and mongodb",
+  "license": "ISC",
+  "author": "Sahadat Hossen",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.6.1"
+  }
+}
