@@ -4,10 +4,11 @@ import Todo from "../models/todo.model.js";
 //create todo
 const createTodo=async(req,res)=>{
     try {
-        await Todo.create(req.body);
+      const data=  await Todo.create(req.body);
         res.status(201).json({
             success:true,
-            message:"todo created successfully"
+            message:"todo created successfully",
+            data
         })
     } catch (error) {
         res.status(500).json({
