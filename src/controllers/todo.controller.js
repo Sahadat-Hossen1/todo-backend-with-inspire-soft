@@ -62,7 +62,8 @@ const updateTodo=async(req,res)=>{
         const todo= await Todo.findByIdAndUpdate(_id,UpdatedTodo,{new:true})
         res.status(200).json({
             success:true,
-            message:"todo updated successfully"
+            message:"todo updated successfully",
+            todo
         })
     } catch (error) {
         res.status(500).json({
