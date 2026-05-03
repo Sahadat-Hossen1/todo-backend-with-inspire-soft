@@ -20,7 +20,12 @@ const createTodo=async(req,res)=>{
 //get all todos
 const getTodos=async(req,res)=>{
     try{
-        const todos=await Todo.find({});
+    const filters={}
+
+    if(req.query.isCompleted !== undefined){
+        filters.isCompleted=req.query.isCompleted === "true"
+    }
+        const todos=await Todo.find(filters);
         res.status(200).json({
             success:true,
             todos
